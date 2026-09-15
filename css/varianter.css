@@ -1,0 +1,60 @@
+:root {
+  /* SPACING */
+  --gap-xxs: 10px;
+  --gap-xs: 15px;
+  --gap-s: 25px;
+  --gap-m: 35px;
+  --gap-l: 40px;
+  --gap-xl: 50px;
+  --gap-xxl: 100px;
+
+  /* COLORS */
+  --black: #2a2a2a;
+  --darkblue: #0b2549;
+  --blue: #2c5dd8;
+  --grey: #eeeeee;
+  --white: #f8f8f8;
+  --orange: #e07817;
+
+  /* FONTS */
+  p {
+    font-family: "Montserrat", "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    color: var(--black);
+  }
+
+  h1 {
+    font-family: "Montserrat", "Helvetica Neue", sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+  h2 {
+    font-family: "Montserrat", "Helvetica Neue", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  h3 {
+    font-family: "Montserrat", "Helvetica Neue", sans-serif;
+    font-size: 15px;
+  }
+
+  h4 {
+    font-family: "Reenie Beanie", sans-serif;
+    font-size: 40px;
+  }
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 20px;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    h4 {
+      font-size: 20px;
+    }
+  }
+}

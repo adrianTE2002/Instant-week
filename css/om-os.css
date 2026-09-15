@@ -1,38 +1,39 @@
-
-/* 1 sektion */
+/* ---------- Intro sektion: mobile (default) ---------- */
 .about-section {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 4rem;
-  padding: 4rem 8%;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 2.5rem 5%;
 }
 
 .about-text {
-  max-width: 500px;
+  max-width: 100%;
 }
 
 .about-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
 }
 
 .about-text p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   line-height: 1.6;
+  font-size: 0.95rem;
 }
 
-/* Polaroid-gruppen */
+/* Polaroid-gruppen: mindre og centreret på mobil */
 .polaroid-group {
   position: relative;
-  width: 480px;
-  height: 520px;
+  width: 100%;
+  max-width: 320px;
+  height: 380px;
+  margin: 0 auto;
 }
 
 .polaroid {
   position: absolute;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  width: 260px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  width: 190px;
 }
 
 .polaroid-1 {
@@ -43,7 +44,7 @@
 }
 
 .polaroid-2 {
-  top: 110px;
+  top: 80px;
   right: 0;
   transform: rotate(4deg);
   z-index: 2;
@@ -51,7 +52,7 @@
 
 .polaroid-3 {
   bottom: 0;
-  left: 110px;
+  left: 60px;
   transform: rotate(-2deg);
   z-index: 3;
 }
@@ -61,46 +62,173 @@
   display: block;
 }
 
-/* 2 sektion */
+/* ---------- Sponsor sektion: mobile (default) ---------- */
 .sponsor-section {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 4rem;
+  flex-direction: column-reverse;
+  gap: 2.5rem;
   background-color: #0f1f3d;
   color: white;
-  padding: 6rem 8%;
+  padding: 3rem 5%;
+  text-align: center;
 }
 
 .sponsor-logo {
-  flex: 0 0 auto;
-  max-width: 45%;
+  max-width: 100%;
 }
 
 .sponsor-logo img {
   width: 100%;
+  max-width: 320px;
   height: auto;
   display: block;
+  margin: 0 auto;
 }
 
 .sponsor-text {
-  flex: 0 0 auto;
-  max-width: 500px;
+  max-width: 100%;
 }
 
 .sponsor-text h2 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 .sponsor-text p {
   line-height: 1.6;
-  margin-bottom: 1.5rem;
-  opacity: 0.9
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+  opacity: 0.9;
 }
 
 .sponsor-text p:last-child {
   margin-bottom: 0;
 }
 
+/* ---------- Dommere sektion: mobile (default) ---------- */
+.judges-section {
+  padding: 2.5rem 5%;
+}
+
+.judges-section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f1f3d;
+  margin-bottom: 1.5rem;
+}
+
+.judges-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.judge-card {
+  background-color: #F7F7F8;
+  padding: 0.5rem;
+}
+
+.judge-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.judge-card p {
+  padding: 0.75rem 0.25rem;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.judge-placeholder {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8a8a8a;
+}
+
+/* ---------- Tablet (min-width: 768px) ---------- */
+@media (min-width: 768px) {
+  .sponsor-section {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .sponsor-logo img {
+    margin: 0;
+  }
+}
+
+/* ---------- Desktop (min-width: 1024px) ---------- */
+@media (min-width: 1024px) {
+  .about-section {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    padding: 4rem 8%;
+  }
+
+  .about-text {
+    max-width: 500px;
+  }
+
+  .about-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .polaroid-group {
+    width: 480px;
+    max-width: none;
+    height: 520px;
+    margin: 0;
+  }
+
+  .polaroid-1 { width: 260px; top: 0; left: 0; }
+  .polaroid-2 { width: 260px; top: 110px; right: 0; }
+  .polaroid-3 { width: 260px; bottom: 0; left: 110px; }
+
+  .sponsor-section {
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 6rem 8%;
+  }
+
+  .sponsor-logo {
+    flex: 0 0 auto;
+    max-width: 55%;
+  }
+
+  .sponsor-text {
+    flex: 0 0 auto;
+    max-width: 500px;
+  }
+
+  .sponsor-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .judges-section {
+    padding: 4rem 8%;
+  }
+
+  .judges-section h2 {
+    font-size: 2rem;
+    max-width: 1100px;
+    margin: 0 auto 2.5rem auto;
+  }
+
+  .judges-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+}

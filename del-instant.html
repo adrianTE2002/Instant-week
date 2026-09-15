@@ -1,39 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Reenie+Beanie&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/varianter.css" />
+  </head>
+  <body>
     <header class="site-header">
-        <a href="forside.html" class="logo-link" aria-label="Gå til forsiden">
-    <img src="imgs/logo-1.svg" alt="Firmalogo" class="logo" /></a>
-        <nav>
-            <ul>
-                <li><a href="del-instant.html">Del instants</a></li>
-                <li><a href="vindere.html">Vindere & nominerede</a></li>
-                <li><a href="om-os.html">Om os</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-    
-    </main>
-    <footer class="site-footer">
-    <a href="forside.html" class="logo-link" aria-label="Gå til forsiden">
-        <img src="imgs/logo-2.svg" alt="Firmalogo" class="footer-logo" />
-    </a>
-    <nav class="footer-nav">
+      <a href="forside.html" class="logo-link" aria-label="Gå til forsiden">
+        <img src="imgs/logo-1.svg" alt="Firmalogo" class="logo" />
+      </a>
+      <button class="menu-toggle" aria-label="Åbn menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav>
         <ul>
-            <li><a href="del-instant.html">Del instants</a></li>
-            <li><a href="vindere.html">Vindere & nominerede</a></li>
-            <li><a href="om-os.html">Om os</a></li>
+          <li><a href="del-instant.html">Del instants</a></li>
+          <li><a href="vindere.html">Vindere & nominerede</a></li>
+          <li><a href="om-os.html">Om os</a></li>
         </ul>
-    </nav>
-    <p>&copy; 2026 Instant Week. Alle rettigheder forbeholdes.</p>
-</footer>
-</body>
+      </nav>
+    </header>
+    <main></main>
+    <footer class="site-footer">
+      <a href="forside.html" class="logo-link" aria-label="Gå til forsiden">
+        <img src="imgs/logo-1.svg" alt="Firmalogo" class="footer-logo" />
+      </a>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="del-instant.html">Del instants</a></li>
+          <li><a href="vindere.html">Vindere & nominerede</a></li>
+          <li><a href="om-os.html">Om os</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2026 Instant Week. Alle rettigheder forbeholdes.</p>
+    </footer>
+    <script>
+      const toggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector(".site-header nav");
+
+      toggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", isOpen);
+      });
+    </script>
+  </body>
 </html>
