@@ -1,0 +1,106 @@
+
+/* 1 sektion */
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  padding: 4rem 8%;
+}
+
+.about-text {
+  max-width: 500px;
+}
+
+.about-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Polaroid-gruppen */
+.polaroid-group {
+  position: relative;
+  width: 480px;
+  height: 520px;
+}
+
+.polaroid {
+  position: absolute;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 260px;
+}
+
+.polaroid-1 {
+  top: 0;
+  left: 0;
+  transform: rotate(-3deg);
+  z-index: 1;
+}
+
+.polaroid-2 {
+  top: 110px;
+  right: 0;
+  transform: rotate(4deg);
+  z-index: 2;
+}
+
+.polaroid-3 {
+  bottom: 0;
+  left: 110px;
+  transform: rotate(-2deg);
+  z-index: 3;
+}
+
+.polaroid img {
+  width: 100%;
+  display: block;
+}
+
+/* 2 sektion */
+.sponsor-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  background-color: #0f1f3d;
+  color: white;
+  padding: 6rem 8%;
+}
+
+.sponsor-logo {
+  flex: 0 0 auto;
+  max-width: 45%;
+}
+
+.sponsor-logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sponsor-text {
+  flex: 0 0 auto;
+  max-width: 500px;
+}
+
+.sponsor-text h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.sponsor-text p {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  opacity: 0.9
+}
+
+.sponsor-text p:last-child {
+  margin-bottom: 0;
+}
+
