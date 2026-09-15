@@ -13,7 +13,7 @@
 }
 
 .logo {
-  height: 40px;
+  height: 70px;
   width: auto;
   display: block;
 }
@@ -27,7 +27,7 @@
 }
 
 .site-header nav a {
-  color: #2A2A2A;
+  color: #E07817;
   text-decoration: none;
   font-weight: 600;
 }
@@ -36,7 +36,8 @@
 
 /* Footer styles */
 .site-footer {
-  background-color: #0f1f3d; /* samme mørkeblå som header */
+  border-top: 1px solid black;
+  background-color: #EEEEEE;
   color: white;
   padding: 2rem;
   text-align: center;
@@ -51,11 +52,11 @@
 }
 
 .footer-nav a {
-  color: white;
+  color: #E07817;
   text-decoration: none;
 }
 .footer-logo {
-  height: 40px;
+  height: 70px;
   width: auto;
   display: block;
  margin: 0 auto 1rem;
