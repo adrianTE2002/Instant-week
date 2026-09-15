@@ -22,17 +22,32 @@
     font-size: 16px;
     color: var(--black);
   }
+  .display-font {
+    font-family: "Special Elite";
+    font-size: 100px;
+  }
+
+  a {
+    font-family: "Montserrat", "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .p-variant {
+    font-family: "Montserrat", "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    color: var(--white);
+  }
 
   h1 {
     font-family: "Montserrat", "Helvetica Neue", sans-serif;
-    font-size: 40px;
-    font-weight: 500;
+    font-size: 50px;
+    font-weight: bolder;
   }
 
   h2 {
     font-family: "Montserrat", "Helvetica Neue", sans-serif;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 40px;
+    font-weight: 600;
   }
 
   h3 {
@@ -46,15 +61,19 @@
   }
   @media (max-width: 768px) {
     h1 {
-      font-size: 20px;
+      font-size: 30px;
     }
 
     h2 {
-      font-size: 18px;
+      font-size: 20px;
     }
 
     h4 {
       font-size: 20px;
+    }
+    .display-font {
+      font-family: "Special Elite";
+      font-size: 50px;
     }
   }
 }
