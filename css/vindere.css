@@ -1,0 +1,343 @@
+/* =========================
+   RESET / GLOBAL
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.bg-blue {
+  background-color: #0b2549;
+}
+
+main section:not(.bg-blue) {
+  background-image: url("../imgs/papirBG.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+h3 {
+  margin-bottom: 5px;
+}
+/* =========================
+   HERO
+   MOBILE
+========================= */
+
+.hero {
+  padding: 40px 24px;
+}
+
+.hero > div {
+  max-width: 500px;
+}
+
+.hero > img {
+  width: 140px;
+  margin: 32px auto 0;
+}
+
+/* =========================
+   STATS
+   MOBILE
+========================= */
+
+.stats {
+  padding: 45px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+}
+
+.stats > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.stats img {
+  width: 100px;
+}
+
+.stats > div:nth-child(2) img {
+  width: 140px;
+}
+
+.stats p {
+  margin: 0;
+  color: white;
+}
+
+/* =========================
+   LAST CONTEST WINNER
+   MOBILE
+========================= */
+
+.winner {
+  padding: 40px 24px;
+}
+
+.winner > div {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.winner > div > div:first-child {
+  max-width: 280px;
+}
+
+.winner > div > div:first-child img {
+  width: 100%;
+}
+
+.winner-picture {
+  position: relative;
+}
+
+.winner-picture img {
+  display: block;
+  width: 100%;
+}
+
+.winner-picture p {
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+/* =========================
+   NOMINEES
+   MOBILE
+========================= */
+
+.nominees {
+  padding: 40px 16px;
+  color: white;
+}
+
+.nominee-grid {
+  display: grid;
+
+  /* 2 kolonner på mobil */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+.picture p {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+  background-color: rgb(222 222 222 / 20%);
+
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/*
+Vigtigt:
+Brug IKKE:
+
+opacity: 0.2;
+
+på .card.
+
+Så bliver billeder og tekst også gennemsigtige.
+rgb(... / 20%) gør kun baggrunden gennemsigtig.
+*/
+
+.picture {
+  background-color: white;
+  padding: 8px;
+  color: black;
+}
+
+.picture img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.picture p {
+  margin-bottom: 0;
+}
+
+/* tekstområdet i kortet */
+
+.card > div:last-child {
+  padding: 0 4px 8px;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  margin-top: 0;
+}
+
+/* =========================
+   SE MERE
+========================= */
+
+/* Vis kun de første 6 cards */
+.nominee-grid .card:nth-child(n + 7) {
+  display: none;
+}
+
+/* Når grid får class .expanded,
+   vises resten */
+.nominee-grid.expanded .card:nth-child(n + 7) {
+  display: flex;
+}
+
+.see-more-btn {
+  width: 100%;
+  margin-top: 24px;
+
+  padding: 14px 20px;
+
+  border: 0;
+
+  cursor: pointer;
+}
+
+@media (min-width: 755px) {
+  h1 {
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+  h3 {
+    margin-bottom: 10px;
+  }
+  /* =====================
+       HERO DESKTOP
+    ===================== */
+
+  .hero {
+    min-height: 500px;
+
+    padding: 70px 10%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+  }
+
+  .hero > div {
+    width: 50%;
+  }
+
+  .hero > img {
+    width: 260px;
+    margin: 0;
+  }
+
+  /* =====================
+       STATS DESKTOP
+    ===================== */
+
+  .stats {
+    min-height: 500px;
+
+    padding: 70px 10%;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .stats > div {
+    flex: 1;
+  }
+
+  .stats img {
+    width: 170px;
+  }
+
+  .stats > div:nth-child(2) img {
+    width: 220px;
+  }
+
+  /* =====================
+       WINNER DESKTOP
+    ===================== */
+
+  .winner {
+    padding: 70px 10%;
+  }
+
+  .winner > div {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 70px;
+  }
+
+  .winner > div > div:first-child {
+    width: 40%;
+    max-width: 400px;
+  }
+
+  .winner > div > div:last-child {
+    width: 45%;
+  }
+
+  /* =====================
+       NOMINEES DESKTOP
+    ===================== */
+
+  .nominees {
+    padding: 70px 8%;
+  }
+
+  .nominee-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .picture {
+    padding: 14px;
+  }
+
+  .picture p {
+    margin-top: 20px;
+  }
+}
