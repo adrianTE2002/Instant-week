@@ -1,0 +1,387 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#vilkaar {
+  scroll-margin-top: 100px;
+}
+
+#vilkaar-info h1,
+p {
+  padding-bottom: var(--gap-s);
+}
+
+.vilkaar-accordion {
+  background-color: var(--darkblue);
+  padding: 60px 10%;
+}
+.vilkaar-accordion p,
+h1 {
+  color: var(--white);
+}
+
+.vilkaar-accordion details {
+  border: 1px solid white;
+  border-radius: 2px;
+  margin-bottom: 15px;
+}
+
+.vilkaar-accordion summary {
+  padding: 24px;
+  cursor: pointer;
+  list-style: none;
+  color: var(--white);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+/* Fjern standard trekant */
+.vilkaar-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Plus */
+.vilkaar-accordion summary::after {
+  content: "+";
+  float: right;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/* Minus når den er åben */
+.vilkaar-accordion details[open] summary::after {
+  content: "−";
+}
+
+.vilkaar-content {
+  padding: 0 24px 24px 24px;
+  color: white;
+}
+
+.vilkaar-content p {
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.vilkaar-content p:last-child {
+  margin-bottom: 0;
+}
+/* =========================
+   PPAPER EFFECT
+========================= */
+
+/* =========================
+   INDSEND-KNAP
+========================= */
+
+.submit-button {
+  width: 100%;
+  height: 29px;
+  margin-top: 21px;
+
+  border: none;
+  border-radius: 2px;
+
+  background-color: var(--orange);
+  color: white;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: var(--blue);
+}
+
+/* =========================
+   FEJLMEDDELELSER
+========================= */
+
+.error-message {
+  display: none;
+}
+/* =========================
+   BILLEDE-UPLOAD
+========================= */
+
+.form-group input[type="file"] {
+  width: 100%;
+  height: 84px;
+  box-sizing: border-box;
+  border: 1px dashed #e8750b;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: #777;
+}
+
+/* Gør upload-knappen mere enkel */
+.form-group input[type="file"]::file-selector-button {
+  display: none;
+}
+/* =========================
+   FORMULAR
+========================= */
+
+.instant-form-section {
+  background-color: #fafafa;
+  padding: 100px 50px 100px;
+}
+
+.del-instant-form {
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 9px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+  width: 100%;
+  height: 34px;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid #e8750b;
+  background: transparent;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus {
+  border-bottom: 2px solid #e8750b;
+}
+
+/* =========================
+   DEL DIT INSTANT GUIDE
+========================= */
+
+.del-instant-guide {
+  padding: 24px 29px 75px;
+}
+
+.del-instant-guide h1 {
+  color: #003b91;
+  text-align: center;
+  padding-bottom: var(--gap-s);
+}
+
+.del-instant-guide ol {
+  margin: 0;
+  padding-left: 26px;
+}
+
+.del-instant-guide li {
+  padding-left: 0;
+  margin-bottom: 25px;
+}
+
+.del-instant-guide li:last-child {
+  margin-bottom: 0;
+}
+/* ========================================
+   DESKTOP
+======================================== */
+@media (min-width: 768px) {
+  main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .instant-layout {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+
+    padding: 70px 60px;
+    box-sizing: border-box;
+  }
+
+  .vilkaar-accordion {
+    width: 100%;
+    margin: 0;
+    padding: 70px 60px;
+
+    background-color: var(--darkblue);
+    box-sizing: border-box;
+  }
+
+  #vilkaar-info,
+  .vilkaar-accordion details {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 768px) {
+  main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .del-instant-guide,
+  .instant-form-section {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* ======================================
+     VENSTRE SIDE
+  ====================================== */
+
+  .del-instant-guide {
+    padding: 0;
+
+    background: transparent;
+  }
+
+  .del-instant-guide h1 {
+    margin: 0 0 65px;
+
+    text-align: left;
+
+    font-size: 48px;
+    line-height: 1.1;
+
+    color: #092f5f;
+  }
+
+  .del-instant-guide ol {
+    padding-left: 28px;
+  }
+
+  .del-instant-guide li {
+    font-size: 18px;
+    line-height: 1.4;
+
+    margin-bottom: 25px;
+
+    padding-left: 2px;
+  }
+
+  /* ======================================
+     HØJRE SIDE - FORMULAR
+  ====================================== */
+
+  .instant-form-section {
+    padding: 90px 70px 95px;
+
+    background-color: var(--white);
+
+    box-sizing: border-box;
+  }
+
+  .del-instant-form {
+    gap: 29px;
+  }
+
+  /* ======================================
+     LABELS
+  ====================================== */
+
+  .form-group label {
+    margin-bottom: 18px;
+
+    font-size: 18px;
+  }
+
+  /* ======================================
+     INPUTS
+  ====================================== */
+
+  .form-group input[type="text"],
+  .form-group input[type="email"] {
+    height: 38px;
+
+    font-size: 16px;
+  }
+
+  /* ======================================
+     UPLOAD
+  ====================================== */
+
+  .form-group input[type="file"] {
+    height: 126px;
+  }
+
+  /* ======================================
+     BESKRIVELSE + TITEL
+  ====================================== */
+
+  .del-instant-form {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    column-gap: 75px;
+    row-gap: 29px;
+  }
+
+  /* Fulde navn */
+
+  .del-instant-form .form-group:nth-child(1) {
+    grid-column: 1 / -1;
+  }
+
+  /* E-mail */
+
+  .del-instant-form .form-group:nth-child(2) {
+    grid-column: 1 / -1;
+  }
+
+  /* Upload */
+
+  .del-instant-form .form-group:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  /* Beskrivelse */
+
+  .del-instant-form .form-group:nth-child(4) {
+    grid-column: 1;
+  }
+
+  /* Titel */
+
+  .del-instant-form .form-group:nth-child(5) {
+    grid-column: 2;
+  }
+
+  /* ======================================
+     KNAP
+  ====================================== */
+
+  .submit-button {
+    grid-column: 1 / -1;
+
+    width: 100%;
+    height: 42px;
+
+    margin-top: 25px;
+
+    font-size: 18px;
+  }
+}
