@@ -38,6 +38,10 @@
     color: var(--white);
   }
 
+  .cards .p-variant {
+    font-size: 14px;
+  }
+
   h1 {
     font-family: "Montserrat", "Helvetica Neue", sans-serif;
     font-size: 50px;
@@ -57,7 +61,11 @@
 
   h4 {
     font-family: "Reenie Beanie", sans-serif;
-    font-size: 40px;
+    font-size: 38px;
+  }
+
+  button {
+    font-family: "Montserrat", "Helvetica Neue", sans-serif;
   }
   @media (max-width: 768px) {
     h1 {
