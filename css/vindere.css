@@ -36,6 +36,7 @@ h2 {
 h3 {
   margin-bottom: 5px;
 }
+
 /* =========================
    HERO
    MOBILE
@@ -86,7 +87,9 @@ h3 {
   margin: 0;
   color: white;
 }
-
+.stats h4 {
+  color: var(--white);
+}
 /* =========================
    LAST CONTEST WINNER
    MOBILE
@@ -119,13 +122,14 @@ h3 {
   width: 100%;
 }
 
-.winner-picture p {
+.winner-picture h4 {
   position: absolute;
-  bottom: 4%;
+  bottom: 6%;
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
 }
+
 /* =========================
    NOMINEES
    MOBILE
@@ -145,7 +149,7 @@ h3 {
   gap: 16px;
 }
 
-.picture p {
+.picture h4 {
   margin-top: 10px;
   text-align: center;
 }
@@ -180,6 +184,7 @@ rgb(... / 20%) gør kun baggrunden gennemsigtig.
   background-color: white;
   padding: 8px;
   color: black;
+  height: 210px;
 }
 
 .picture img {
@@ -335,9 +340,10 @@ rgb(... / 20%) gør kun baggrunden gennemsigtig.
 
   .picture {
     padding: 14px;
+    height: 455px;
   }
 
-  .picture p {
+  .picture h4 {
     margin-top: 20px;
   }
 }
