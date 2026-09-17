@@ -369,7 +369,7 @@ Første billede bliver stort
    FRA 755PX
 ========================= */
 
-@media (min-width: 755px) {
+@media (min-width: 1100px) {
   /* =====================
      HERO DESKTOP
   ===================== */
@@ -527,7 +527,7 @@ Første billede bliver stort
    PÅVIRKER KUN SKÆRME UNDER 755PX
 ================================================== */
 
-@media (max-width: 754px) {
+@media (max-width: 1100px) {
   /* =========================
      GENERELT
   ========================= */
