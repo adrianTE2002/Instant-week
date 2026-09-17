@@ -47,7 +47,7 @@ h3 {
 }
 
 .hero > div {
-  max-width: 500px;
+  max-width: 622px;
 }
 
 .hero > img {
@@ -255,16 +255,16 @@ rgb(... / 20%) gør kun baggrunden gennemsigtig.
   .hero {
     min-height: 500px;
 
-    padding: 70px 10%;
+    padding: 150px 0%;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 200px;
+    gap: 300px;
   }
 
   .hero > div {
-    width: 50%;
+    width: 52%;
   }
 
   .hero > img {

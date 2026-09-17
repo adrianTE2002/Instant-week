@@ -41,6 +41,10 @@
     color: var(--white);
   }
 
+  .h1-variant {
+    color: var(--white);
+  }
+
   .cards .p-variant {
     font-size: 14px;
   }
@@ -49,6 +53,8 @@
     font-family: "Montserrat", "Helvetica Neue", sans-serif;
     font-size: 50px;
     font-weight: bolder;
+
+    color: #092f5f;
   }
 
   h2 {
