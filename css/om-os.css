@@ -4,6 +4,10 @@
   flex-direction: column;
   gap: 2.5rem;
   padding: 2.5rem 5%;
+  background-image: url(../imgs/papirBG.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .about-text {
@@ -109,6 +113,10 @@
 /* ---------- Dommere sektion: mobile (default) ---------- */
 .judges-section {
   padding: 2.5rem 5%;
+  background-image: url(../imgs/papirBG.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .judges-section h1 {
@@ -153,7 +161,7 @@
 }
 
 /* ---------- Tablet (min-width: 768px) ---------- */
-@media (min-width: 768px) {
+@media (min-width: 1100px) {
   .sponsor-section {
     flex-direction: row;
     text-align: left;
@@ -165,7 +173,7 @@
 }
 
 /* ---------- Desktop (min-width: 1024px) ---------- */
-@media (min-width: 1024px) {
+@media (min-width: 1100px) {
   .about-section {
     flex-direction: row;
     justify-content: space-between;
