@@ -2,6 +2,84 @@ html {
   scroll-behavior: smooth;
 }
 
+main {
+  background-image: url("../imgs/papirBG.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* ACCORDION */
+.vilkaar-accordion details {
+  transition: border-color 0.3s ease;
+}
+
+.vilkaar-accordion details:hover {
+  border-color: var(--orange);
+}
+
+.vilkaar-accordion details:hover summary {
+  color: var(--orange);
+}
+.vilkaar-content {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.vilkaar-accordion details[open] {
+  border-color: var(--orange);
+  box-shadow: 0 0 12px rgba(232, 117, 11, 0.25);
+}
+.vilkaar-accordion details {
+  border: 1px solid white;
+  border-radius: 2px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.vilkaar-accordion summary {
+  padding: 24px;
+  cursor: pointer;
+  list-style: none;
+  color: var(--white);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+/* Når accordionen er åben */
+.vilkaar-accordion details[open] {
+  border-color: var(--orange);
+}
+
+.vilkaar-accordion details[open] summary {
+  color: var(--orange);
+}
+
+/* Plus/minus */
+.vilkaar-accordion summary::after {
+  content: "+";
+  float: right;
+  font-size: 24px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+/* Når accordionen er åben */
+.vilkaar-accordion details[open] summary::after {
+  content: "−";
+  color: var(--orange);
+}
+
 #vilkaar {
   scroll-margin-top: 100px;
 }
@@ -129,7 +207,7 @@ h1 {
 ========================= */
 
 .instant-form-section {
-  background-color: #fafafa;
+  background-color: var(--white);
   padding: 100px 50px 100px;
 }
 
@@ -179,7 +257,7 @@ h1 {
 }
 
 .del-instant-guide h1 {
-  color: #003b91;
+  color: var(--mediumblue);
   text-align: center;
   padding-bottom: var(--gap-s);
 }
@@ -211,7 +289,6 @@ h1 {
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
@@ -266,8 +343,6 @@ h1 {
 
     font-size: 48px;
     line-height: 1.1;
-
-    color: #092f5f;
   }
 
   .del-instant-guide ol {
